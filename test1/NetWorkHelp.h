@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
 
+typedef void(^success) (AFHTTPRequestOperation *operation,id responseObj);
+typedef void(^failure)(AFHTTPRequestOperation *operation,NSString * errorMsg);
 @interface NetWorkHelp : NSObject
 
 @end
