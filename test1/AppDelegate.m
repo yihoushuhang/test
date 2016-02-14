@@ -4,10 +4,11 @@
 //
 //  Created by 杨航 on 15/11/18.
 //  Copyright © 2015年 yanghang. All rights reserved.
-//
+//  30b0df7893ec4d058dd123f0103ad639
 
 #import "AppDelegate.h"
 #import "AFNetworking.h"
+#import "timeTool.h"
 #define SysVerify @"296014"
 
 
@@ -18,46 +19,72 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    NSDictionary *registerDic =@{@"mobile":@"18203979395",@"password":@"123",@"smsVerify":SysVerify};
-    NSLog(@"注册：%@\n",registerDic);
-    
-    NSDictionary *loginForPasswordDic = @{@"mobile":@"18203979395",@"password":@"123",@"loginType":@"0",@"deviceType":@"1"};
-    NSLog(@"密码登陆：%@\n",loginForPasswordDic);
 
-    NSDictionary *loginForSmsVerydDic = @{@"mobile":@"18203979395",@"smsVerify":SysVerify,@"loginType":@"1",@"deviceType":@"1"};
-    NSLog(@"验证码登陆：%@\n",loginForSmsVerydDic);
+
     
-    NSDictionary *updatePasswordDic = @{@"mobile":@"18203979395",@"password":@"123456",@"smsVerify":SysVerify,@"deviceType":@"1"};
-    NSLog(@"修改密码：%@\n",updatePasswordDic);
-    NSDictionary *updateInfoDic = @{@"mobile":@"18203979395",@"userName":@"aobama",@"gender":@"0",@"deviceType":@"1"};
-    NSLog(@"修改昵称：%@\n",updateInfoDic);
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    //申明返回的结果是json类型
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    //申明请求的数据是json类型
-    manager.requestSerializer=[AFJSONRequestSerializer serializer];
-    //如果报接受类型不一致请替换一致text/html或别的
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    [manager POST:kNetAddress_getSmsVery parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@",[responseObject[@"resInfo"] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]);
-        NSLog(@"%@",responseObject);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
+//    NSDictionary *registerDic =@{@"mobile":@"18203979395",@"password":@"123",@"smsVerify":SysVerify};
+//    NSLog(@"注册：%@\n",registerDic);
+//    
+//    NSDictionary *loginForPasswordDic = @{@"mobile":@"18203979395",@"password":@"123",@"loginType":@"0",@"deviceType":@"1"};
+//    NSLog(@"密码登陆：%@\n",loginForPasswordDic);
 //
+//    NSDictionary *loginForSmsVerydDic = @{@"mobile":@"18203979395",@"smsVerify":SysVerify,@"loginType":@"1",@"deviceType":@"1"};
+//    NSLog(@"验证码登陆：%@\n",loginForSmsVerydDic);
+//    
+//    NSDictionary *updatePasswordDic = @{@"mobile":@"18203979395",@"password":@"123456",@"smsVerify":SysVerify,@"deviceType":@"1"};
+//    NSLog(@"修改密码：%@\n",updatePasswordDic);
+//    NSDictionary *updateInfoDic = @{@"mobile":@"18203979395",@"userName":@"aobama",@"gender":@"0",@"deviceType":@"1"};
+//    NSLog(@"修改昵称：%@\n",updateInfoDic);
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+//    manager.requestSerializer.timeoutInterval = 20;
+////
+//    UIImageView * imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"testPicture"]];
+//    NSData * imageData = UIImageJPEGRepresentation(imageView.image, 0.5);
+//    [manager POST:kNetAddress_publishImages parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData)
+//     {
+//         NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)firstObject];
+//         NSString *filePath = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"1.jpg"]];
+//        [imageData writeToFile:filePath options:NSDataWritingAtomic error:nil];
+//         // 上传的参数名
+//         // 上传filename
+//         NSString * fileName = [NSString stringWithFormat:@"1.jpg"];
+//         if (imageData) {
+//             [formData appendPartWithFileData:imageData name:@"fileUpload" fileName:fileName mimeType:@"image/jpg/jpeg/png"];
+//         }
+//         if (imageData) {
+////             NSURL *fileURL = [NSURL fileURLWithPath:filePath];
+////             [formData appendPartWithFileURL:fileURL name:@"fileUpload" fileName:fileName mimeType:@"image/jpg/jpeg/png" error:nil];
+//         }
+//     }
+//          success:^(AFHTTPRequestOperation *operation, id responseObject)
+//     {
+//         NSLog(@"%@",responseObject);
+//     }
+//          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+//     {
+//         NSLog(@"%@\n",error);
+//     }];
+//
+   
     
+
+
 /*****/
-//    NSURL *url = [NSURL URLWithString:kNetAddress_login];
-//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-//    request.HTTPMethod = @"POST";
-//    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-//    NSData *data = [NSJSONSerialization dataWithJSONObject:dic3 options:NSJSONWritingPrettyPrinted error:nil];
-//    request.HTTPBody = data;
-//    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-//        NSString *result = [[NSString alloc] initWithData:data  encoding:NSUTF8StringEncoding];
-//                 NSLog(@"%@",result);
-//            }];
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+//    manager.requestSerializer=[AFJSONRequestSerializer serializer];
+//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+//    [manager POST:kNetAddress_getHouseList parameters:@{@"pageNo":@"1",@"pageSize":@"10",@"deviceType":@"1"} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        ;
+//        NSLog(@"%@",responseObject);
+//        
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        
+//        NSLog(@"%@",error);
+//    }];
+//    NSLog(@"%.0d",3000000/100);
+    
     
     
     return YES;

@@ -10,32 +10,69 @@
 #import "YHNetHelper.h"
 #import "AppDelegate.h"
 #import "NetWorkHelper.h"
-@interface ViewController ()
+#import "timeTool.h"
+#import "timeModel.h"
+
+#define kWidth self.view.frame.size.width
+#define kHeight self.view.frame.size.height
+@interface ViewController ()<UIPickerViewDelegate,UIPickerViewDataSource>
 @property (nonatomic, strong)YHNetHelper *helper;
+@property (nonatomic, strong)NSMutableArray *dataSourceArray;
+@property (nonatomic, copy)NSString *presentTime;
+@property (nonatomic, assign)NSInteger indexRow;
+@property (nonatomic, strong)NSMutableArray *modelArray;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.helper = [YHNetHelper new];
-//        NSDictionary *dic =@{@"mobile":@"13260102033",@"password":@"13260102033",@"loginType":@"13260102033",@"deviceType":@"1"};
-//    
-//    [self.helper AFPost:kNetAddress_login parameters:dic Success:^(id result) {
-//        
-//        NSLog(@"成功");
-//    } fail:^(NSError *error) {
-//        NSLog(@"%@",error);
-//        NSLog(@"失败");
-//    }];
+    timeTool *tt = [timeTool new];
+    UIView *backGroudView = [[UIView alloc]initWithFrame:CGRectMake(0, 64, kWidth, 250)];
+    [self.view addSubview:backGroudView];
+    
+    UIPickerView *pickV = [[UIPickerView alloc]initWithFrame:CGRectMake(0, 50, kWidth, 250)];
+    [backGroudView addSubview:pickV];
+    pickV.backgroundColor = [UIColor orangeColor];
+    
+    self.dataSourceArray =  [tt getTimeWithRecently];
+    self.presentTime = tt.presentTime;
+    self.indexRow = [self.dataSourceArray indexOfObject:self.presentTime];
+    for (timeModel *a in tt.selectDate) {
+        NSLog(@"%@--%@--%@",a.month,a.day,a.week);
+    }
+    [self.dataSourceArray replaceObjectAtIndex:self.indexRow withObject:@"今  天"];
+    [self.dataSourceArray replaceObjectAtIndex:self.indexRow - 1 withObject:@"昨  天"];
+    [self.dataSourceArray replaceObjectAtIndex:self.indexRow + 1 withObject:@"明  天"];
+    pickV.delegate = self;
+    pickV.dataSource = self;
+    [pickV selectRow:self.indexRow inComponent:0 animated:YES];
+}
 
-//    UIView *aa = [[UIView alloc]initWithFrame:CGRectMake(150, 300, 160, 160)];
-//    [self.view addSubview:aa];
-//    aa.backgroundColor = [UIColor redColor];
-//    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    btn.backgroundColor = [UIColor orangeColor];
-//    btn.frame = CGRectMake(50, 055, 60,60);
-//    [aa addSubview:btn];
+- (NSMutableArray *)dataSourceArray {
+    if (!_dataSourceArray) {
+        self.dataSourceArray = [NSMutableArray array];
+    }
+    return _dataSourceArray;
+}
+
+- (NSMutableArray *)modelArray {
+    if (!_modelArray) {
+        self.modelArray = [NSMutableArray array];
+    }
+    return _modelArray;
+}
+//列数
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+//每列的数据有多少
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return self.dataSourceArray.count;
+}
+
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return [self.dataSourceArray objectAtIndex:row];
 }
 
 - (void)test {
@@ -44,7 +81,6 @@
 //    [helper downLoadMusic:@"http://tingge.5nd.com/20060919/w/2005510/72041/264421.mp3?000" name:@"我的失忆男友" type:@"mp3"];
 //    NSLog(@"路径：%@",[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)firstObject]);
 }
-
 
 - (void)networkDataIsSuccessful:(id)obj {
     

@@ -26,7 +26,10 @@
 		2C29CF351C085F1B00274C65 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29CF241C085F1B00274C65 /* UIWebView+AFNetworking.m */; };
 		2C29CF3E1C08668900274C65 /* NetWorkHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C29CF3D1C08668900274C65 /* NetWorkHelp.m */; };
 		2C388C2E1C252370001A090F /* NetWorkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C388C2D1C252370001A090F /* NetWorkHelper.m */; };
+		2C3FEBBB1C3FAF5700A365DA /* testPicture.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C3FEBBA1C3FAF5700A365DA /* testPicture.png */; };
 		2C4DD53A1C0D420400E4D882 /* YHNetHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4DD5391C0D420400E4D882 /* YHNetHelper.m */; };
+		2C78868C1C5F070300539859 /* timeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C78868B1C5F070300539859 /* timeTool.m */; };
+		2C78868F1C5F1E4400539859 /* timeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C78868E1C5F1E4400539859 /* timeModel.m */; };
 		2CA312AF1BFC6C01004DB2B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA312AE1BFC6C01004DB2B1 /* main.m */; };
 		2CA312B21BFC6C01004DB2B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA312B11BFC6C01004DB2B1 /* AppDelegate.m */; };
 		2CA312B51BFC6C01004DB2B1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA312B41BFC6C01004DB2B1 /* ViewController.m */; };
@@ -35,6 +38,8 @@
 		2CA312BD1BFC6C01004DB2B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA312BB1BFC6C01004DB2B1 /* LaunchScreen.storyboard */; };
 		2CA312C81BFC6C01004DB2B1 /* test1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA312C71BFC6C01004DB2B1 /* test1Tests.m */; };
 		2CA312D31BFC6C01004DB2B1 /* test1UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA312D21BFC6C01004DB2B1 /* test1UITests.m */; };
+		2CC0D60C1C3F5C6500026046 /* shopLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CC0D60B1C3F5C6500026046 /* shopLogo.png */; };
+		2CCEFAE41C3E730300430624 /* iconfont-jiantou@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CCEFAE31C3E730300430624 /* iconfont-jiantou@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,8 +100,13 @@
 		2C29CF3D1C08668900274C65 /* NetWorkHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkHelp.m; sourceTree = "<group>"; };
 		2C388C2C1C252370001A090F /* NetWorkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetWorkHelper.h; path = AFNetworking/NetWorkHelper.h; sourceTree = "<group>"; };
 		2C388C2D1C252370001A090F /* NetWorkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetWorkHelper.m; path = AFNetworking/NetWorkHelper.m; sourceTree = "<group>"; };
+		2C3FEBBA1C3FAF5700A365DA /* testPicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = testPicture.png; path = test1/testPicture.png; sourceTree = "<group>"; };
 		2C4DD5381C0D420400E4D882 /* YHNetHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHNetHelper.h; sourceTree = "<group>"; };
 		2C4DD5391C0D420400E4D882 /* YHNetHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHNetHelper.m; sourceTree = "<group>"; };
+		2C78868A1C5F070300539859 /* timeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timeTool.h; sourceTree = "<group>"; };
+		2C78868B1C5F070300539859 /* timeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = timeTool.m; sourceTree = "<group>"; };
+		2C78868D1C5F1E4400539859 /* timeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timeModel.h; sourceTree = "<group>"; };
+		2C78868E1C5F1E4400539859 /* timeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = timeModel.m; sourceTree = "<group>"; };
 		2CA312AA1BFC6C01004DB2B1 /* test1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA312AE1BFC6C01004DB2B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CA312B01BFC6C01004DB2B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -113,6 +123,8 @@
 		2CA312CE1BFC6C01004DB2B1 /* test1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA312D21BFC6C01004DB2B1 /* test1UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test1UITests.m; sourceTree = "<group>"; };
 		2CA312D41BFC6C01004DB2B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CC0D60B1C3F5C6500026046 /* shopLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shopLogo.png; path = test1/shopLogo.png; sourceTree = "<group>"; };
+		2CCEFAE31C3E730300430624 /* iconfont-jiantou@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iconfont-jiantou@2x.png"; path = "test1/AFNetworking/iconfont-jiantou@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +208,9 @@
 		2CA312A11BFC6C01004DB2B1 = {
 			isa = PBXGroup;
 			children = (
+				2CCEFAE31C3E730300430624 /* iconfont-jiantou@2x.png */,
+				2CC0D60B1C3F5C6500026046 /* shopLogo.png */,
+				2C3FEBBA1C3FAF5700A365DA /* testPicture.png */,
 				2CA312AC1BFC6C01004DB2B1 /* test1 */,
 				2CA312C61BFC6C01004DB2B1 /* test1Tests */,
 				2CA312D11BFC6C01004DB2B1 /* test1UITests */,
@@ -218,6 +233,10 @@
 			children = (
 				2C388C2C1C252370001A090F /* NetWorkHelper.h */,
 				2C388C2D1C252370001A090F /* NetWorkHelper.m */,
+				2C78868A1C5F070300539859 /* timeTool.h */,
+				2C78868B1C5F070300539859 /* timeTool.m */,
+				2C78868D1C5F1E4400539859 /* timeModel.h */,
+				2C78868E1C5F1E4400539859 /* timeModel.m */,
 				2C29CEFF1C085F1B00274C65 /* AFNetworking */,
 				2CA312B01BFC6C01004DB2B1 /* AppDelegate.h */,
 				2CA312B11BFC6C01004DB2B1 /* AppDelegate.m */,
@@ -363,9 +382,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3FEBBB1C3FAF5700A365DA /* testPicture.png in Resources */,
 				2CA312BD1BFC6C01004DB2B1 /* LaunchScreen.storyboard in Resources */,
 				2CA312BA1BFC6C01004DB2B1 /* Assets.xcassets in Resources */,
+				2CC0D60C1C3F5C6500026046 /* shopLogo.png in Resources */,
 				2CA312B81BFC6C01004DB2B1 /* Main.storyboard in Resources */,
+				2CCEFAE41C3E730300430624 /* iconfont-jiantou@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +414,8 @@
 			files = (
 				2C29CF2A1C085F1B00274C65 /* AFURLConnectionOperation.m in Sources */,
 				2C29CF251C085F1B00274C65 /* AFHTTPRequestOperation.m in Sources */,
+				2C78868F1C5F1E4400539859 /* timeModel.m in Sources */,
+				2C78868C1C5F070300539859 /* timeTool.m in Sources */,
 				2C29CF311C085F1B00274C65 /* UIButton+AFNetworking.m in Sources */,
 				2C29CF281C085F1B00274C65 /* AFNetworkReachabilityManager.m in Sources */,
 				2C29CF331C085F1B00274C65 /* UIProgressView+AFNetworking.m in Sources */,
@@ -553,6 +577,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = test1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yanghang.test1;
@@ -564,6 +589,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = test1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yanghang.test1;

@@ -55,7 +55,7 @@
 //    //申明请求的数据是json类型
     manager.requestSerializer=[AFJSONRequestSerializer serializer];
 //    //如果报接受类型不一致请替换一致text/html或别的
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/javascript"];
     [manager POST:urlString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         //        NSLog(@"JSON: %@",[responseObject[@"resMsg"] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]);
         NSLog(@"%@",responseObject);
